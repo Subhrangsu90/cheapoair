@@ -1,0 +1,193 @@
+.flight-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #fff;
+    margin: auto;
+    display: flex;
+    box-shadow: 0 0 .2125rem 0 hsla(0,0%,68%,.8);
+    gap: 12px;
+    position: relative;
+}
+
+.flight-tags {
+    display: flex;
+    gap: 10px;
+}
+
+.tag {
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.best {
+    background: #e6f0ff;
+    color: #007bff;
+}
+
+.cheapest {
+    background: #e6ffe6;
+    color: #198754;
+}
+
+.info-flight-card {
+    display: flex;
+    flex-direction: column;
+    flex: 4;
+    gap: 1rem;
+}
+
+.detais-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 1rem;
+}
+
+.flight-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    // border-top: 1px solid #eee;
+    // padding-top: 12px;
+}
+
+.airline {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    min-width: 180px;
+    border-left: 3px solid rgb(50, 122, 247);
+    padding-left: 1rem;
+}
+
+.airline img {
+    width: 36px;
+    height: auto;
+}
+
+.flight-type {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.airline-name {
+    font-size: 12px;
+    color: #555;
+}
+
+.timing {
+    text-align: center;
+    min-width: 70px;
+}
+
+.time {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.code {
+    font-size: 12px;
+    color: #555;
+}
+
+.route-line {
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+.select-button {
+    display: flex;
+    width: 20%;
+
+    .btn {
+
+        border: 1px solid #007bff;
+        background: transparent;
+        padding: 6px 12px;
+        font-size: 14px;
+        color: #007bff;
+        border-radius: 6px;
+        cursor: pointer;
+        width: 100%;
+    }
+}
+
+.flight-price {
+    margin-left: 12px;
+    text-align: right;
+    border-left: 1px dashed #ccc;
+    padding: 1.2rem;
+    flex: 1;
+}
+
+.amount {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.monthly {
+    font-size: 12px;
+    color: #007bff;
+}
+
+.note {
+    font-size: 10px;
+    color: #888;
+    margin: 6px 0;
+}
+
+.primary {
+    background: #ff5200;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.details-chip {
+    display: flex;
+    position: absolute;
+    bottom: -16px;
+    left: 2rem;
+    padding: 0.35rem 0.65rem;
+    border-radius: 2rem;
+    border: 1px solid #d8d9df;
+    background: white;
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: rgb(50, 82, 245);
+    box-shadow: 0 2px .3125rem 0 #d8d9df;
+    cursor: pointer;
+
+    .chip-title {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+    }
+}
+
+.flight-details-card{
+    background: #fff;
+    margin: auto;
+    display: flex;
+    // flex-direction: column;
+    gap: 12px;
+
+    .detais-card{
+        border-bottom: 1px solid #ddd;
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+        display: flex;
+        flex-direction: column;
+        margin: 0 1rem;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        width: 100%;
+    }
+}

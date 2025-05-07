@@ -4,10 +4,11 @@ import { FormsModule } from '@angular/forms';
 import { FloatLabel } from 'primeng/floatlabel';
 import { ButtonModule } from 'primeng/button';
 import { NgClass } from '@angular/common';
+import { FlightCardComponent } from "../../shared/flight-card/flight-card.component";
 
 @Component({
   selector: 'app-flight-list',
-  imports: [InputTextModule, FormsModule, FloatLabel,ButtonModule,NgClass],
+  imports: [InputTextModule, FormsModule, FloatLabel, ButtonModule, NgClass, FlightCardComponent],
   templateUrl: './flight-list.component.html',
   styleUrl: './flight-list.component.scss'
 })

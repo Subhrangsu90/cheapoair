@@ -80,9 +80,9 @@
                 <div class="flex border border-gray-300 rounded-lg overflow-hidden shadow-sm size-auto">
                     <!-- Recommended Tab -->
                     <div
-                      class="flex-1 px-6 py-3 text-sm cursor-pointer bg-white"
+                      class="flex-1 px-6 py-3 cursor-pointer bg-white"
                       [ngClass]="{
-                        'text-blue-600 border-b-2 border-blue-600': activeTab === 'recommended',
+                        'text-blue-600 border-b-3 border-blue-600 rounded-bl-lg': activeTab === 'recommended',
                         'text-black hover:bg-gray-50': activeTab !== 'recommended'
                       }"
                       (click)="setTab('recommended')"
@@ -104,9 +104,9 @@
                   <hr class="border-r border-gray-300 h-auto" />
                     <!-- Cheapest Tab -->
                     <div
-                      class="flex-1 px-6 py-3 text-sm cursor-pointer bg-white"
+                      class="flex-1 px-6 py-3 cursor-pointer bg-white"
                       [ngClass]="{
-                        'text-blue-600 border-b-2 border-blue-600': activeTab === 'cheapest',
+                        'text-blue-600 border-b-3 border-blue-600 rounded-ee-lg': activeTab === 'cheapest',
                         'text-black hover:bg-gray-50': activeTab !== 'cheapest'
                       }"
                       (click)="setTab('cheapest')"
@@ -123,6 +123,15 @@
                       </div>
                     </div>
                   </div>
+            </div>
+            <div class="flight-table-card">
+                @if (activeTab === 'recommended') {
+                    <div>Recommended fares shown here...</div>
+                    <app-flight-card/>
+                }
+                @if (activeTab === 'cheapest') {
+                    <div>Cheapest fares shown here...</div>
+                }
             </div>
         </section>
         <aside class="basis-[15rem]">3</aside>

@@ -1,0 +1,60 @@
+<div class="flight-card">
+    <div class="info-flight-card">
+        <div class="flight-tags">
+            <span class="tag best">Best</span>
+            <span class="tag cheapest">Cheapest</span>
+        </div>
+        <div class="detais-container">
+            @for (flight of flightData.flights; track $index) {
+            <div class="flight-info">
+                <div class="airline">
+                    <img [src]="flight.logo" [alt]="flight.airline" />
+                    <div>
+                        <div class="flight-type">{{ flight.stops }}</div>
+                        <div class="airline-name">{{ flight.airline }}</div>
+                    </div>
+                </div>
+                <div class="timing">
+                    <div class="time">{{ flight.from.time }}</div>
+                    <div class="code">{{ flight.from.code }}</div>
+                </div>
+
+                <div class="route-line w-[15%]">
+                    <hr>
+                </div>
+
+                <div class="timing">
+                    <div class="time">{{ flight.to.time }}</div>
+                    <div class="code">{{ flight.to.code }}</div>
+                </div>
+
+                <div class="select-button">
+                    <button class="btn">
+                        {{ flight.type === 'departure' ? 'Select Departure' : 'Select Return' }}
+                    </button>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+    <div class="flight-price">
+        <div class="amount">{{ flightData.currency }} {{ flightData.price }}</div>
+        <div class="monthly">As low as ${{ flightData.pricePerMonth }}/mo</div>
+        <div class="note">Price per person<br />(incl. taxes & fees)</div>
+        <button class="btn primary">Select</button>
+    </div>
+    @if (!showDetails) {
+    <div class="details-chip" (click)="toggleDetails()">
+        <div class="chip-title">Flight Details <i class="pi pi-angle-down"></i></div>
+    </div>
+    }
+
+</div>
+
+@if (showDetails) {
+<div class="flight-details-card">
+    <div class="detais-card">
+        <p>Hello</p>
+    </div>
+</div>
+}
