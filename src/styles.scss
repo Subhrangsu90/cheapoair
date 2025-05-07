@@ -6,11 +6,47 @@
     width: 80%;
 }
 
-body{
+// body{
+//     background-color: #ffffff;
+//     font-family: 'Roboto', sans-serif;
+//     font-size: 16px;
+//     font-weight: 400;
+//     line-height: 1.5;
+//     text-align: left; 
+// }
+
+body {
     background-color: #ffffff;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
-    text-align: left; 
+    text-align: left;
+    margin: 0;
+    padding: 0;
 }
+
+/* Tablets (Portrait) */
+@media (max-width: 1024px) and (min-width: 768px) {
+    body {
+        font-size: 15px; /* Slightly smaller font for tablets */
+        line-height: 1.5;
+    }
+}
+
+/* Small screens (Mobile) */
+@media (max-width: 767px) {
+    body {
+        font-size: 14px; /* Smaller font for mobile screens */
+        line-height: 1.4;
+    }
+}
+
+/* Extra Small screens (Mobile landscape) */
+@media (max-width: 480px) {
+    body {
+        font-size: 13px; /* Even smaller font for smaller devices */
+        line-height: 1.3;
+    }
+}
+

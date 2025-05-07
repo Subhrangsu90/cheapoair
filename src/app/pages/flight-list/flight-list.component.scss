@@ -60,3 +60,26 @@ a{
     color: #949494;
     font-weight: 400;
   }
+
+
+
+// /* Hide the first sticky element when the second one comes into view */
+// #promoBox {
+//   position: sticky;
+//   top: 8rem;
+//   z-index: 10;
+// }
+
+// /* Add opacity transition for smooth hiding of the first sticky box */
+// #helpBox {
+//   transition: opacity 0.3s ease;
+// }
+
+// /* Hide the first box when the second box comes into view */
+// #promoBox:in-viewport ~ #helpBox {
+//   opacity: 0;
+// }
+
+  
+  
+  

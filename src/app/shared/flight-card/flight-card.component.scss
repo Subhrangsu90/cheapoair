@@ -2,10 +2,10 @@
     border: 1px solid #ddd;
     border-radius: 10px;
     background: #fff;
-    margin: auto;
+    // margin: auto;
     display: flex;
     box-shadow: 0 0 .2125rem 0 hsla(0,0%,68%,.8);
-    gap: 12px;
+    // gap: 12px;
     position: relative;
 }
 
@@ -50,8 +50,12 @@
     align-items: center;
     justify-content: space-between;
     gap: 16px;
-    // border-top: 1px solid #eee;
-    // padding-top: 12px;
+    padding-right: 1rem;
+  
+    &:hover{
+        cursor: pointer;
+        background: #e8f2ff;
+    }
 }
 
 .airline {
@@ -116,7 +120,7 @@
 }
 
 .flight-price {
-    margin-left: 12px;
+    // margin-left: 12px;
     text-align: right;
     border-left: 1px dashed #ccc;
     padding: 1.2rem;
@@ -191,3 +195,84 @@
         width: 100%;
     }
 }
+
+  
+  .flight-details-section {
+   border-bottom: 1px solid #ddd;
+        .pi{
+            font-size: 0.75rem;
+        }
+  
+    &:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+}
+  
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .close-link {
+    color: #007bff;
+    cursor: pointer;
+    font-size: 13px;
+  }
+  
+  .flight-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .airline-info {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  
+    img {
+      width: 40px;
+      height: auto;
+    }
+  
+    .airline-name {
+      font-weight: bold;
+    }
+  
+    .flight-info {
+      font-size: 13px;
+    }
+  
+    .cabin,
+    .duration {
+      font-size: 12px;
+      color: #555;
+    }
+  }
+  
+  .timing-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  
+    .date {
+      font-size: 13px;
+      font-weight: 500;
+    }
+  
+    .time {
+      font-size: 16px;
+      font-weight: bold;
+    }
+  
+    .location {
+      font-size: 13px;
+      color: #444;
+    }
+  }
+  
