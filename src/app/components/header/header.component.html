@@ -1,0 +1,98 @@
+<div class="header-part flex flex-col gap-1 shadow-[0_.125rem_.5rem_0_rgba(0,0,0,.2)] bg-[#fff] fixed top-0 left-0 right-0 z-50">
+    <header class="container mx-auto flex items-center justify-between pt-2 ">
+        <div class="header-left-part">
+            <img src="assets/logo.png" alt="" class="h-[2.5rem]">
+        </div>
+        <div class="header-right-part flex items-center gap-4">
+            <a href="tel:000-800-050-3540" role="button"
+                class="customer-care flex gap-1 items-center border border-[#007c04] rounded-[2rem] px-[0.2rem] py-[0.15rem]">
+                <i
+                    class="bg-[url(https://c.fareportal.com/gcms/portals/2/rweb/images/avatar.webp)] h-[1.8rem] w-[1.8rem] bg-no-repeat bg-contain absolut">
+                    <img src="https://c.fareportal.com/gcms/portals/2/rweb/images/phone-ico.webp" alt=""
+                        class="relative h-[1rem] w-[1rem] top-[1.05rem] left-[-0.2rem]">
+                </i>
+                <span class="text-[0.75rem] font-bold">
+                    <span class="text-[#434752]">Book Now - Call us 24/7 </span>
+                    <span class="text-[#1f9823] mx-2 ">000-800-050-3540</span>
+                </span>
+            </a>
+            <p-button label="USD($)" [dt]="buttonStyle" variant="text" severity="secondary" icon="pi pi-sort-down-fill"
+                iconPos="right" size="small" (onClick)="op.toggle($event)"></p-button>
+            <span class="flex items-center gap-1">
+                <img src="assets/user-icon.svg" alt="" class="h-[1.1rem] w-[1.1rem]">
+                <p class="font-bold text-[0.75rem]">Sign In / Join</p>
+            </span>
+        </div>
+    </header>
+    <div class="container mx-auto flex flex-col gap-1 pb-2" tabindex="0" (click)="showOverlay($event)">
+        <div class="filter-part flex flex-col">
+            <div class="flight-type flex items-center gap-4 mb-2">
+                <div class="radio-container flex items-center gap-1">
+                    <input type="radio" id="round_trip" name="category" value="round_trip" checked>
+                    <label for="round_trip">Round Trip</label>
+                </div>
+                <div class="radio-container flex items-center gap-1">
+                    <input type="radio" id="one_way" name="category" value="one_way">
+                    <label for="one_way">One Way</label>
+                </div>
+                <div class="radio-container flex items-center gap-1">
+                    <input type="radio" id="multi_city" name="category" value="multi_city">
+                    <label for="multi_city">Multi City</label>
+                </div>
+            </div>
+
+            <section class="advance-search-part flex items-center gap-2">
+                <div class="flex items-center gap-2 left-part w-[70%]">
+                    <div class="location-conatainer flex gap-1">
+                        <div class="input-container">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <input type="text" placeholder="Where from?" class="input-field">
+                            <i class="pi pi-times  text-[#d6d6d6] pr-3"></i>
+                        </div>
+                        <div class="input-swittch">
+                            <i class="pi pi-arrow-right-arrow-left"></i>
+                        </div>
+                        <div class="input-container">
+                            <i class="fa-solid fa-location-dot pl-5"></i>
+                            <input type="text" placeholder="Where to?" class="input-field">
+                            <i class="pi pi-times  text-[#d6d6d6]"></i>
+                        </div>
+                    </div>
+                    <div class="date-container flex items-center gap-2 ">
+                        <div class="input-date-container">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <input type="text" placeholder="Departure Date" class="input-field">
+                            <span class="flex items-center gap-1">
+                                <i class="pi pi-angle-left"></i>
+                                <i class="pi pi-angle-right"></i>
+                            </span>
+                        </div>
+                        <div class="input-date-container">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <input type="text" placeholder="Departure Date" class="input-field">
+                            <span class="flex items-center gap-1">
+                                <i class="pi pi-angle-left"></i>
+                                <i class="pi pi-angle-right"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-part flex items-center">
+                    <div class="flex items-center gap-2">
+                        <div class="input-container">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" placeholder="1 Traveler,Coach" class="input-field" disabled
+                                class="w-[8rem]">
+                        </div>
+                        <p-button label="Modify Search" severity="info" [outlined]="true" />
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+<div class="overlay"  [class.active]="isOverlayVisible" (click)="hideOverlay()"></div>
+
+<p-popover #op>
+    <p>List of Country</p>
+</p-popover>

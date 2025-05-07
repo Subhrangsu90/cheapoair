@@ -1,0 +1,101 @@
+input[type="radio"]{
+    accent-color: #0060c6;
+}
+
+.location-conatainer{
+    position: relative;
+
+}
+.input-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.45rem;
+    border: 1px solid #969494;
+
+    input[type="text"]{
+        outline: none;
+    }
+    .pi {
+        font-size: 0.5rem;
+        cursor: pointer;
+    }
+}
+.input-swittch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 50%;
+    border: 1px solid #969494;
+    position: absolute;
+    left: 45.8%;
+    top: 0.2rem;
+    background-color: rgb(255, 255, 255);
+}
+
+
+.input-date-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.45rem;
+    border: 1px solid #969494;
+    width: 80%;
+
+    input[type="text"]{
+        outline: none;
+        width: inherit;
+        
+    }
+    .pi {
+        font-size: 0.6rem;
+        cursor: pointer;
+    }
+}
+
+input[type="text"]{
+    outline: none;
+}
+
+ 
+.overlay {
+    position: fixed;  /* Ensures it's fixed in place */
+    top: 0;
+    left: 0;
+    width: 100%;      /* Full width of the screen */
+    height: 100%;     /* Full height of the screen */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 40;      /* Make sure the overlay is above content, but below header */
+    opacity: 0;       /* Initially hidden */
+    visibility: hidden;
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+    background-color: rgba(0, 0, 0, 0.359); 
+}
+
+.flight-type {
+    /* Transform and visibility logic stays the same */
+    transform-origin: top;
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.container:focus-within .flight-type {
+    opacity: 1;
+    visibility: visible;
+    max-height: 10rem; /* Adjust this according to your needs */
+}

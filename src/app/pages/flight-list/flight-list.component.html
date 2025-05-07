@@ -1,0 +1,130 @@
+<main>
+    <div class="container mx-auto flex gap-3 pt-5">
+        <aside class="basis-[16rem]">
+            <div class="alert-notification p-4">
+                <h2 class="text-lg font-bold mb-2"><i class="fas fa-bell text-[#4e70f6] mr-2 "></i> Get Fare Alerts!
+                </h2>
+                <p class="text-sm mb-2"><strong>CCU</strong> - Kolkata to <strong>PNQ</strong> - Pune</p>
+                <p-floatlabel variant="in">
+                    <input pInputText id="in_label" [(ngModel)]="value2" autocomplete="off" size="small" />
+                    <label for="in_label">Enter Email Address</label>
+                </p-floatlabel>
+                <div class="flex w-full my-2">
+                    <p-button label="Get Fare Alerts!" severity="info" class="w-full" styleClass="w-full"
+                        [dt]="fontStyle" />
+                </div>
+                <p class="text-xs">By signing up, you accept our <a href="">Terms and Conditions</a>, <a href="">Privacy
+                        Policy</a> and to receive emails.</p>
+            </div>
+        </aside>
+        <section class="basis-[calc(100%-31rem)] flex flex-col gap-4">
+            <div class="flight-block">
+                <div class="flight-table">
+                    <div class="flight-header col-start text-sm">Show All Fares</div>
+                    <div class="flight-header py-4">
+                        <div class="airline-info flex flex-col items-center text-sm gap-1">
+                            <img src="assets/airlines_logo/2j.gif" alt="IndiGo Airlines" class="w-[44px] h-[26px]" />
+                            <span>IndiGo Airlines</span>
+                        </div>
+                    </div>
+                    <div class="flight-header py-4">
+                        <div class="airline-info flex flex-col items-center text-sm gap-1">
+                            <img src="assets/airlines_logo/2i.gif" alt="IndiGo Airlines (with others)"
+                                class="w-[44px] h-[26px]" />
+                            <span>IndiGo Airlines<br /><small>(with others)</small></span>
+                        </div>
+                    </div>
+                    <div class="flight-header py-4">
+                        <div class="airline-info flex flex-col items-center text-sm gap-1">
+                            <img src="assets/airlines_logo/nz.gif" alt="Akasa Air" class="w-[44px] h-[26px]" />
+                            <span>Akasa Air<br /><small>(with others)</small></span>
+                        </div>
+                    </div>
+                    <div class="flight-header py-4">
+                        <div class="airline-info flex flex-col items-center text-sm gap-1">
+                            <img src="assets/airlines_logo/os.gif" alt="Akasa Air" class="w-[44px] h-[26px]" />
+                            <span>Akasa Air</span>
+                        </div>
+                    </div>
+                    <div class="flight-header py-4">
+                        <div class="airline-info flex flex-col items-center text-sm gap-1">
+                            <img src="assets/airlines_logo/ob.gif" alt="Air India" class="w-[44px] h-[26px]" />
+                            <span>Air India</span>
+                        </div>
+                    </div>
+                    <div class="flight-header py-4">
+                        <div class="airline-info flex flex-col items-center text-sm gap-1">
+                            <img src="assets/airlines_logo/on.gif" alt="Hahn Air" class="w-[44px] h-[26px]" />
+                            <span>Hahn Air Systems</span>
+                        </div>
+                    </div>
+                    <!-- Non Stop Row -->
+                    <div class="flight-label">Non stop</div>
+                    <div class="flight-cell"><span class="price">USD 231.99</span></div>
+                    <div class="flight-cell"><span class="price">USD 240.99</span></div>
+                    <div class="flight-cell"><span class="price">USD 240.99</span></div>
+                    <div class="flight-cell"><span class="price">USD 260.99</span></div>
+                    <div class="flight-cell dash">—</div>
+                    <div class="flight-cell dash">—</div>
+                    <!-- 1 Stop Row -->
+                    <div class="flight-label">1 stop</div>
+                    <div class="flight-cell dash">—</div>
+                    <div class="flight-cell dash">—</div>
+                    <div class="flight-cell dash">—</div>
+                    <div class="flight-cell dash">—</div>
+                    <div class="flight-cell"><span class="price">USD 314.99</span></div>
+                    <div class="flight-cell"><span class="price">USD 1,158.50</span></div>
+                </div>
+            </div>
+            <div class="tabs">
+                <div class="flex border border-gray-300 rounded-lg overflow-hidden shadow-sm size-auto">
+                    <!-- Recommended Tab -->
+                    <div
+                      class="flex-1 px-6 py-3 text-sm cursor-pointer bg-white"
+                      [ngClass]="{
+                        'text-blue-600 border-b-2 border-blue-600': activeTab === 'recommended',
+                        'text-black hover:bg-gray-50': activeTab !== 'recommended'
+                      }"
+                      (click)="setTab('recommended')"
+                    >
+                      <div class="font-semibold flex items-center gap-1">
+                        Recommended
+                        <span class="text-xs text-gray-400">ⓘ</span>
+                      </div>
+                      <div
+                        [ngClass]="{
+                          'text-blue-600': activeTab === 'recommended',
+                          'text-gray-800': activeTab !== 'recommended'
+                        }"
+                        class="text-xs font-semibold"
+                      >
+                        USD <span class="align-super text-[10px]">231.99</span>
+                      </div>
+                    </div>
+                  <hr class="border-r border-gray-300 h-auto" />
+                    <!-- Cheapest Tab -->
+                    <div
+                      class="flex-1 px-6 py-3 text-sm cursor-pointer bg-white"
+                      [ngClass]="{
+                        'text-blue-600 border-b-2 border-blue-600': activeTab === 'cheapest',
+                        'text-black hover:bg-gray-50': activeTab !== 'cheapest'
+                      }"
+                      (click)="setTab('cheapest')"
+                    >
+                      <div class="font-semibold">Cheapest</div>
+                      <div
+                        [ngClass]="{
+                          'text-blue-600': activeTab === 'cheapest',
+                          'text-gray-800': activeTab !== 'cheapest'
+                        }"
+                        class="text-xs font-semibold"
+                      >
+                        USD <span class="align-super text-[10px]">231.99</span>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </section>
+        <aside class="basis-[15rem]">3</aside>
+    </div>
+</main>
