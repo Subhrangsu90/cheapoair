@@ -1,19 +1,22 @@
 import { NgIf } from '@angular/common';
 import { Component, ElementRef, HostListener } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { PopoverModule } from 'primeng/popover';
 
 
 @Component({
   selector: 'app-header',
-  imports: [ButtonModule,PopoverModule],
+  imports: [ButtonModule,PopoverModule,FormsModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  isFlightTypeVisible = false;
-  constructor(private eRef: ElementRef) {}
-
+  isOverlayVisible = false;
+  showAdvancedOptions = false;
+  returnFromDifferentAirport = false;
+  directFlightsOnly = false;
+ 
   buttonStyle={
     label:{
       fontWeight: '700',
@@ -34,8 +37,6 @@ export class HeaderComponent {
     console.log('openDialog');
   }
 
-  isOverlayVisible = false;
-
   showOverlay(event: Event) {
     event.stopPropagation();
     this.isOverlayVisible = true;
@@ -52,12 +53,11 @@ export class HeaderComponent {
     this.isOverlayVisible = !this.isOverlayVisible;
   }
 
-//   @HostListener('document:click', ['$event.target'])
-// onClickOutside(targetElement: HTMLElement) {
-//   const clickedInside = targetElement.closest('.advance-search-part');
-//   if (!clickedInside) {
-//     this.hideOverlay();
-//   }
-// }
+
+  
+  toggleAdvancedOptions() {
+    this.showAdvancedOptions = !this.showAdvancedOptions;
+  }
+  
 
 }

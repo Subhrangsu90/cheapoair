@@ -5,10 +5,11 @@ import { FloatLabel } from 'primeng/floatlabel';
 import { ButtonModule } from 'primeng/button';
 import { NgClass } from '@angular/common';
 import { FlightCardComponent } from "../../shared/flight-card/flight-card.component";
+import { FilterComponent } from "../../shared/filter/filter.component";
 
 @Component({
   selector: 'app-flight-list',
-  imports: [InputTextModule, FormsModule, FloatLabel, ButtonModule, NgClass, FlightCardComponent],
+  imports: [InputTextModule, FormsModule, FloatLabel, ButtonModule, NgClass, FlightCardComponent, FilterComponent],
   templateUrl: './flight-list.component.html',
   styleUrl: './flight-list.component.scss'
 })
@@ -59,7 +60,7 @@ export class FlightListComponent {
     pricePerMonth: 21,
     currency: 'USD',
     isBest: true,
-    isCheapest: true,
+    isCheapest: false,
     flights: [
       {
         type: 'departure',
@@ -85,7 +86,7 @@ export class FlightListComponent {
     price: 189.49,
     pricePerMonth: 17,
     currency: 'USD',
-    isBest: true,
+    isBest: false,
     isCheapest: true,
     flights: [
       {
@@ -272,8 +273,8 @@ export class FlightListComponent {
   ];
 
   cheapestFlightDataList = [{
-    price: 231.99,
-    pricePerMonth: 21,
+    price: 281.09,
+    pricePerMonth: 27,
     currency: 'USD',
     isBest: false,
     isCheapest: true,
@@ -299,8 +300,8 @@ export class FlightListComponent {
     ]
   },
   {
-    price: 189.49,
-    pricePerMonth: 17,
+    price: 289.49,
+    pricePerMonth: 18,
     currency: 'USD',
     isBest: false,
     isCheapest: true,

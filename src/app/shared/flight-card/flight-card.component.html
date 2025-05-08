@@ -4,7 +4,7 @@
         <div class="flight-card">
             <div class="info-flight-card">
                 <div class="flight-tags">
-                         @if (flightData.isBest && flightData.isCheapest) {
+                         @if (flightData.isBest || flightData.isCheapest) {
                     @if (flightData.isBest) {
                         <span  class="tag best">Best</span>
                     }

@@ -99,3 +99,18 @@ input[type="text"]{
     visibility: visible;
     max-height: 10rem; /* Adjust this according to your needs */
 }
+
+.adv-search{
+    transform-origin: top;
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.container:focus-within .adv-search{
+    opacity: 1;
+    visibility: visible;
+    max-height: 10rem; /* Adjust this according to your needs */
+}
