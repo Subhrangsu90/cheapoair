@@ -29,7 +29,7 @@ body {
 /* Tablets (Portrait) */
 @media (max-width: 1024px) and (min-width: 768px) {
     body {
-        font-size: 15px; /* Slightly smaller font for tablets */
+        font-size: 15px; 
         line-height: 1.5;
     }
 }
@@ -37,7 +37,7 @@ body {
 /* Small screens (Mobile) */
 @media (max-width: 767px) {
     body {
-        font-size: 14px; /* Smaller font for mobile screens */
+        font-size: 14px; 
         line-height: 1.4;
     }
 }
@@ -45,8 +45,12 @@ body {
 /* Extra Small screens (Mobile landscape) */
 @media (max-width: 480px) {
     body {
-        font-size: 13px; /* Even smaller font for smaller devices */
+        font-size: 13px; 
         line-height: 1.3;
     }
 }
+
+.input-container:focus-within,.input-date-container:focus-within,input:focus-within {
+    background-color: #f0f9ff; 
+  }
 
